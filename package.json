@@ -1,0 +1,30 @@
+{
+  "name": "auth-svcs",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node auth-svcs.js",
+    "debug": "node --inspect --debug-brk auth-svcs"
+  },
+  "engines": {
+    "node": ">=6.9.2"
+  },
+  "dependencies": {
+    "bluebird": "3.5.0",
+    "fwsp-config": "1.1.5",
+    "hydra-express": "1.1.1",
+    "fwsp-jsutils": "1.0.10",
+    "fwsp-jwt-auth": "0.0.8",
+    "fwsp-logger": "0.1.4 ",
+    "fwsp-server-response": "2.2.6",
+		"mongo": "0.1.0"
+  },
+  "devDependencies": {
+    "chai": "3.5.0",
+    "eslint": "3.19.0",
+    "eslint-config-google": "0.7.1",
+    "eslint-plugin-mocha": "4.9.0",
+    "mocha": "3.2.0",
+    "superagent": "3.5.2"
+  }
+}

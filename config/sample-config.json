@@ -1,0 +1,30 @@
+{
+  "environment": "development",
+  "publicCert": "./config/service.pub",
+  "privateCert": "./config/service.pem",
+  "jwtPublicCert": "./config/service.pub",
+  "mongodb": {
+    "connectionString": "mongodb://localhost:27017/auth"
+  },
+  "hydra": {
+    "serviceName": "auth-svcs",
+    "serviceIP": "",
+    "servicePort": 1337,
+    "serviceType": "authentication",
+    "serviceDescription": "Authentication service",
+    "plugins": {
+      "logger": {
+        "logRequests": true,
+        "redact": ["password"],
+        "elasticsearch": {
+          "host": "localhost",
+          "port": 9200,
+          "index": "hydra"
+        }
+      }
+    },
+    "redis": {
+      "url": "redis://127.0.0.1:6379/15"
+    }
+  }
+}
